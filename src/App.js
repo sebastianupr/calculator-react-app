@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react'
+import Calculator from './components/Calculator'
+import './App.css'
+import './styles/theme.css'
 
 function App() {
+  useEffect(() => {
+    const body = document.getElementsByTagName('body')
+    if (body) {
+      body[0].className = 'theme-1'
+    }
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Calculator />
+    </main>
   );
 }
 
