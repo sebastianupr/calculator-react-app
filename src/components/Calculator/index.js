@@ -1,11 +1,9 @@
 import { useState, useCallback, useMemo } from 'react'
-import InputMask from 'react-input-mask';
 import useCalculator from 'hooks/useCalculator'
 import Key from 'components/Key'
 import { NUMBER_AND_ACTION_KEYS, RESULT_KEYS } from 'utils/constants/listOfKeys'
 import { RESET, NUMBER, SUM, RESULT, DELETE, SUBTRACT } from 'utils/constants/listOfTypes'
 import { deleteLastCharacter, getNumberOfTextView } from 'utils/strings';
-import { alphaMask } from 'utils/masks'
 import './Calculator.css'
 
 export default function Calculator() {
