@@ -1,10 +1,9 @@
 import { NUMBER_AND_ACTION_KEYS } from './constants/listOfKeys'
 
-const { SUM, SUBTRACT } = NUMBER_AND_ACTION_KEYS
+const { SUM } = NUMBER_AND_ACTION_KEYS
 
 export const getNumberOfTextView = (string) => {
-  const allNumbers = string.replaceAll(`${SUM.value} ${SUBTRACT.value}`, ' ').split(' ')
-  console.log('allNumbers', allNumbers)
+  const allNumbers = string.replaceAll(`${SUM.value}`, ' ').split(' ')
   const number = allNumbers[allNumbers.length - 1]
   return Number(number)
 }
